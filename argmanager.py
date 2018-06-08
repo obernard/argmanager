@@ -3,9 +3,9 @@
 
 """
 File: argmanager.py
-Author: sahsolent8
-Email: olivier.bernard_ext@softathome.com
-Github: https://gitlabinternal.softathome.com/sahsolent8/toolbox/integ
+Author: Olivier BERNARD
+Email: obernard78+github@gmail.com
+Github: https://github.com/obernard/argmanager
 Description:
     This module adds a layer to argparse, by providing an ArgumentManager class.
 
