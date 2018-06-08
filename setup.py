@@ -13,7 +13,7 @@ class SetupError(RuntimeError):
 NAME = 'argmanager'
 META_PATH = os.path.join('src', 'argmanager', '__init__.py')
 CLASSIFIERS = [
-    'Development Status :: 5 - Production/Stable',
+    'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python',
