@@ -37,7 +37,7 @@ def read(*parts):
     with codecs.open(os.path.join(HERE, *parts), 'rb', 'utf8') as f:
         return f.read()
 
-META_FILE = read(os.path.join('src', NAME, '__init__.py')
+META_FILE = read(os.path.join('src', NAME, '__init__.py'))
 
 
 def find_meta(meta):
