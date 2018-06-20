@@ -10,6 +10,7 @@ class SetupError(RuntimeError):
 
 ###############################################################################
 
+NAME = 'argmanager'
 CLASSIFIERS = [
     'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',
@@ -27,7 +28,6 @@ CLASSIFIERS = [
 ###############################################################################
 
 HERE = os.path.abspath(os.path.dirname(__file__))
-NAME = os.path.basename(HERE)
 
 def read(*parts):
     """
