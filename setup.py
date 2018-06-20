@@ -10,8 +10,6 @@ class SetupError(RuntimeError):
 
 ###############################################################################
 
-NAME = 'argmanager'
-META_PATH = os.path.join('src', 'argmanager', '__init__.py')
 CLASSIFIERS = [
     'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',
@@ -29,6 +27,7 @@ CLASSIFIERS = [
 ###############################################################################
 
 HERE = os.path.abspath(os.path.dirname(__file__))
+NAME = os.path.basename(HERE)
 
 def read(*parts):
     """
@@ -38,7 +37,7 @@ def read(*parts):
     with codecs.open(os.path.join(HERE, *parts), 'rb', 'utf8') as f:
         return f.read()
 
-META_FILE = read(META_PATH)
+META_FILE = read(os.path.join('src', NAME, '__init__.py')
 
 
 def find_meta(meta):
@@ -54,16 +53,6 @@ def find_meta(meta):
     raise SetupError('Unable to find __{}__ string.'.format(meta))
 
 
-def find_version(path):
-    from re import match
-    with open(path) as f:
-        for line in f:
-            match_object = match(
-                    '''__version__ = ['"](.*?)['"]''',
-                    line)
-            if match_object:
-                return match_object.group(1)
-
 args = {'name': NAME,
         'classifiers': CLASSIFIERS,
         'package_dir': {'': 'src'},
@@ -73,5 +62,6 @@ args = {'name': NAME,
         }
 for meta in 'version url description license author email'.split():
     args[meta] = find_meta(meta)
+
 
 setup(**args)
